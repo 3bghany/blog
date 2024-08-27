@@ -16,7 +16,7 @@ Route::group([
     Route::post('signup', [AuthController::class,'register']);
 });
 
-Route::middleware('auth:sanctum')->group(function () {
+Route::middleware('token')->group(function () {
 
     //post
     Route::resource('post',PostController::class);
